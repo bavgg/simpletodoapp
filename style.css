@@ -443,3 +443,69 @@ button.severe:not(:disabled):active,button.severe:not(:disabled):hover {
 button.danger:not(:disabled):active,button.danger:not(:disabled):hover {
   background: var(--danger)
 }
+body {
+  max-width: var(--ct-width);
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  font-family: var(--ft);
+  font-size: var(--ft-size);
+  line-height: 1.5
+}
+
+[data-color-scheme],body {
+  background: var(--bg-default);
+  color: var(--default)
+}
+
+header,main {
+  margin: 0 0 1rem
+}
+
+body>footer:last-child,body>header:first-child {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem
+}
+:not(:is(dialog,article,body)>header:first-child)>:is(h1,h2) {
+  border-color: var(--bd-muted)
+}
+h1,h2,h3,h4,h5,h6 {
+  border-bottom: 1px solid transparent;
+  margin: 0 0 1rem;
+  line-height: 1.25
+}
+
+:not(:is(dialog,article,body)>header:first-child)>:is(h1,h2) {
+  border-color: var(--bd-muted)
+}
+
+:not(hgroup,blockquote,header)>:is(h1,h2,h3,h4,h5,h6):first-child {
+  margin-top: 1.5rem
+}
+
+:is(h1,h2,h3,h4,h5,h6):last-child {
+  margin-bottom: 0
+}
+
+h1 {
+  font-size: 2rem
+}
+:is(h1,h2,h3,h4,h5,h6)[id]>a {
+  position: relative;
+  color: inherit
+}
+
+:is(h1,h2,h3,h4,h5,h6)[id]>a:hover {
+  text-decoration: none
+}
+
+:is(h1,h2,h3,h4,h5,h6)[id]>a:hover::before {
+  position: absolute;
+  top: .125rem;
+  right: calc(100% + .25rem);
+  color: var(--muted);
+  content: "#"
+}
+
+:is(h1,h2,h3,h4,h5,h6)[id]:has(>a:hover) {
+  border-color: currentColor
+}
